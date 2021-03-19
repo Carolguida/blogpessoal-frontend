@@ -11,7 +11,7 @@ ul.social-network li {
 
 .fa {
     font-size: 35pt;
-    color: white;
+    color: #9900a6;;
     padding: 10px;
 }
 
@@ -25,4 +25,13 @@ ul.social-network li {
 
 .fa-linkedin-square:hover {
     color: blue;
+}
+
+.bg-color{
+    background-color:#FFF460;
+}
+
+.text-color{
+
+    color:#9900a6;
 }
