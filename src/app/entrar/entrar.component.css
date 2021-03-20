@@ -1,12 +1,23 @@
 #img-bg {
-    background-image: url('https://i.imgur.com/wWlWf4d.jpg');
+    
+    background-image: linear-gradient(to right, #FDB9FB,#FC6DF8, #80167C,#C957C6);
     min-height: 695px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    width: auto;
 }
 
 .btn:hover{
-    color: darkorange;
+    
     background-color: blueviolet;
 }
+
+
+.bg-white{
+  	
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
+	padding: 20px 30px;
+    border-radius: 0.8cm;
+} 
+
