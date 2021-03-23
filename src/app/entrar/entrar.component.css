@@ -14,10 +14,34 @@
 }
 
 
-.bg-white{
+.bg-color{
   	
+    background-color: aliceblue;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
 	padding: 20px 30px;
     border-radius: 0.8cm;
 } 
+
+.img-login{
+    
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -21%;
+    margin-left: 3.8cm;
+        
+}
+
+.form-group input[type="text"], input[type="password"]{
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    height: 40px;
+    color: #000000;
+    font-size: 16px;
+}
+
 
