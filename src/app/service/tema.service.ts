@@ -26,4 +26,19 @@ export class TemaService {
   postTema(tema: Tema): Observable<Tema>{
     return this.http.post<Tema>(`${this.baseUrl}/tema`, tema, this.token);
   }
+
+  putTema(tema: Tema): Observable<Tema> {
+    return this.http.put<Tema>(`${this.baseUrl}/tema`, tema, this.token);
+  }
+
+  /* Necessário apenas do id para delete tema */
+  deleteTema(id: number) {
+    return this.http.delete(`${this.baseUrl}/tema/${id}`, this.token);
+  }
+
+  /* Traz um objeto tema através do id */
+  getByIdTema(id: number): Observable<Tema> {
+    return this.http.get<Tema>(`${this.baseUrl}/tema/${id}`, this.token);
+  }
+
 }
