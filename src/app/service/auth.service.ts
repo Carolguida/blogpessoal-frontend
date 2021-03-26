@@ -8,7 +8,10 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
+
+  baseUrl = environment.server + environment.port;
 
   constructor(
     private http: HttpClient
@@ -16,18 +19,18 @@ export class AuthService {
 
   entrar(userLogin: UserLogin): Observable<UserLogin>{
 
-    return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin);
+    return this.http.post<UserLogin>(`${this.baseUrl}/usuarios/logar`, userLogin);
 
   }
 
   cadastrar(usuario: Usuario): Observable<Usuario>{
 
-    return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario);
+    return this.http.post<Usuario>(`${this.baseUrl}/usuarios/cadastrar`, usuario);
 
   }
 
   // tslint:disable-next-line: typedef
-  logado() {
+  logado() { /* mostra menu e rodapé se logado */
 
     // tslint:disable-next-line: prefer-const
     let ok = false;

@@ -1,3 +1,5 @@
+/* Objeto tema */
+
 import { Postagem } from './Postagem';
 export class Tema{
 
