@@ -26,7 +26,7 @@ export class TemaEditComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
-    let id = this.route.snapshot.params['id']
+    let id = this.route.snapshot.params['id'] /* pega o id da rota */
     this.findByIdTema(id)
   }
 

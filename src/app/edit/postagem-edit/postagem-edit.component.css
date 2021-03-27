@@ -1,0 +1,11 @@
+.btn{
+  color:#9900a6;
+  background-color: transparent;
+  border-color: #9900a6;
+}
+
+.btn:hover{
+  background-color: #9900a6;
+  color: white;
+}
+

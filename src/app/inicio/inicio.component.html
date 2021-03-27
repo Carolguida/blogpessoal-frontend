@@ -32,15 +32,15 @@
   <nav>
     <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
 
-      <a class="nav-item nav-link active text-dark" id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">
+      <a class="nav-item nav-link active text-color" id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">
       Todas as postagens
       </a>
 
-      <a (click)='findByIdUser()' class="nav-item nav-link text-dark" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">
+      <a (click)='findByIdUser()' class="nav-item nav-link text-color" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">
       Minhas Postagens
       </a>
 
-      <a class="nav-item nav-link text-dark" id="nav-porTema-tab" data-toggle="tab" href="#porTema" role="tab" aria-controls="nav-porTema" aria-selected="false">
+      <a class="nav-item nav-link text-color" id="nav-porTema-tab" data-toggle="tab" href="#porTema" role="tab" aria-controls="nav-porTema" aria-selected="false">
       Postagens por tema
       </a>
     </div>
@@ -75,6 +75,9 @@
             <small class="text-muted">Tema: {{item.tema.descricao}} </small>
             <p class="card-text mt-3">{{item.texto}}</p>
             <p class="card-text"><small class="text-muted"> {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} </small></p>
+
+            <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+            <a [routerLink]="['/postagem-delete', item.id]"  class="text-danger" href="">Apagar</a>
 
           </div>
         </div>
