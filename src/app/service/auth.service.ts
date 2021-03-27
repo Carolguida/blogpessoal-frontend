@@ -29,6 +29,10 @@ export class AuthService {
 
   }
 
+  getByIdUser(id: number): Observable<Usuario>{
+    return this.http.get<Usuario>(`${this.baseUrl}/usuarios/${id}`)
+  }
+
   // tslint:disable-next-line: typedef
   logado() { /* mostra menu e rodapé se logado */
 

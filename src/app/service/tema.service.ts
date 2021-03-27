@@ -15,7 +15,7 @@ export class TemaService {
     private http: HttpClient
   ) { }
 
-  token = { /* objeto token */
+  token = { /* objeto token - para permitir acesso apenas após login(que recebe um token) */
     headers: new HttpHeaders().set('Authorization', environment.token)
   };
 
