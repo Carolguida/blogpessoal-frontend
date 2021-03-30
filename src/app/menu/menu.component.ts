@@ -1,5 +1,5 @@
+import { environment } from 'src/environments/environment.prod';
 import { Router } from '@angular/router';
-import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,26 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  nome = environment.nome;
-  foto = environment.foto;
+  nome = environment.nome
+  foto = environment.foto
+  id = environment.id
 
 
   constructor(
     private router: Router
   ) { }
 
-  // tslint:disable-next-line: typedef
   ngOnInit() {
   }
 
-  // tslint:disable-next-line: typedef
+
   sair(){
 
-    this.router.navigate(['/entrar']);
-    environment.nome = '';
-    environment.token = '';
-    environment.foto = '';
-    environment.id = 0;
+    this.router.navigate(['/entrar'])
+    environment.nome = ''
+    environment.token = ''
+    environment.foto = ''
+    environment.id = 0
 
   }
 

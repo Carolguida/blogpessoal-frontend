@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 
 export class AuthService {
 
-  baseUrl = environment.server + environment.port;
+  baseUrl = environment.server + environment.port
 
   constructor(
     private http: HttpClient
@@ -19,13 +19,13 @@ export class AuthService {
 
   entrar(userLogin: UserLogin): Observable<UserLogin>{
 
-    return this.http.post<UserLogin>(`${this.baseUrl}/usuarios/logar`, userLogin);
+    return this.http.post<UserLogin>(`${this.baseUrl}/usuarios/logar`, userLogin)
 
   }
 
   cadastrar(usuario: Usuario): Observable<Usuario>{
 
-    return this.http.post<Usuario>(`${this.baseUrl}/usuarios/cadastrar`, usuario);
+    return this.http.post<Usuario>(`${this.baseUrl}/usuarios/cadastrar`, usuario)
 
   }
 
@@ -33,17 +33,15 @@ export class AuthService {
     return this.http.get<Usuario>(`${this.baseUrl}/usuarios/${id}`)
   }
 
-  // tslint:disable-next-line: typedef
+
   logado() { /* mostra menu e rodapé se logado */
 
-    // tslint:disable-next-line: prefer-const
     let ok = false;
 
     if (environment.token !== ''){
       ok =  true;
     }
 
-    return ok;
-
+    return ok
   }
 }

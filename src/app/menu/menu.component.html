@@ -6,7 +6,7 @@
   </button>
 
   <nav class="navbar navbar-light bg-color">
-    <a class="navbar-brand " href="#">
+    <a class="navbar-brand " routerLink='/inicio'>
       <img src="https://i.imgur.com/psxIQDq.png" class="img-fluid rounded-circle" width="60" alt="Logo da Escape">
     </a>
   </nav>
@@ -16,10 +16,14 @@
       <li class="nav-item active pl-3">
         <img src="{{foto}}" alt="Imagem do usuário" width="50px" height="30px" class="img-fluid rounded-circle">
 
+        <li class="nav-item pl-3">
+            <p class="m-0 text-color font-weight-bold fs-16 m-0">Olá, {{nome}}</p>
+        </li>
+
       <li class="nav-item pl-3">
-        <a href="">
-          <p class="text-color font-weight-bold fs-16 m-0">Olá, {{nome}}
-            <i class="ml-2 fa fa-pencil-square-o" aria-hidden="true"></i>
+        <a [routerLink]="['/usuario-edit', id]">
+          <p class="text-color font-weight-bold fs-16 m-0">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
           </p>
         </a>
       </li>
