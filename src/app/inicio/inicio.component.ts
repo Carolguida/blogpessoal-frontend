@@ -18,6 +18,8 @@ export class InicioComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
+  tituloPost: string
+  temaPost: string
 
   listaTemas: Tema[]
   idTema: number
@@ -60,6 +62,28 @@ export class InicioComponent implements OnInit {
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp
     })
+  }
+
+  findByTituloPostagem(){
+
+    if (this.tituloPost == ''){
+      this.getAllPostagens()
+    } else {
+      this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+    }
+
+  }
+
+  findByTemaPostagem(){
+    if(this.temaPost == ''){
+      this.getAllTemas()
+    } else {
+      this.temaService.getByNomeTema(this.temaPost).subscribe((resp: Tema[])=> {
+        this.listaTemas = resp
+      })
+    }
   }
 
   getAllPostagens(){
