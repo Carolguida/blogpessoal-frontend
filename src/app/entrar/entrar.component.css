@@ -1,5 +1,5 @@
 #img-bg {
-    
+
     background-image: linear-gradient(to right, #FDB9FB,#FC6DF8, #80167C,#C957C6);
     min-height: 695px;
     background-position: center;
@@ -9,21 +9,21 @@
 }
 
 .btn:hover{
-    
+
     background-color: blueviolet;
 }
 
 
 .bg-color{
-  	
-    background-color: aliceblue;
+
+  background-color: aliceblue;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
 	padding: 20px 30px;
-    border-radius: 0.8cm;
-} 
+  border-radius: 0.8cm;
+}
 
 .img-login{
-    
+
     display: block;
     width: 100px;
     height: 100px;
@@ -31,7 +31,7 @@
     position: absolute;
     top: -21%;
     margin-left: 3.8cm;
-        
+
 }
 
 .form-group input[type="text"], input[type="password"]{
