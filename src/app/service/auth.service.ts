@@ -29,6 +29,11 @@ export class AuthService {
 
   }
 
+  atualizar(usuario: Usuario): Observable<Usuario>{
+    return this.http.put<Usuario>(`${this.baseUrl}/usuarios`, usuario, {headers: {'Authorization': environment.token}})
+
+  }
+
   getByIdUser(id: number): Observable<Usuario>{
     return this.http.get<Usuario>(`${this.baseUrl}/usuarios/${id}`)
   }
