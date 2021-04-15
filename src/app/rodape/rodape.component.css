@@ -9,7 +9,7 @@ ul.social-network li {
     padding: 5px;
 }
 
-.fa {
+.fab{
     font-size: 35pt;
     color: #9900a6;;
     padding: 10px;
@@ -23,7 +23,7 @@ ul.social-network li {
     color:deeppink;
 }
 
-.fa-linkedin-square:hover {
+.fa-linkedin:hover {
     color: blue;
 }
 
@@ -35,3 +35,4 @@ ul.social-network li {
 
     color:#9900a6;
 }
+
