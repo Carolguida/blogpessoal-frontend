@@ -3,17 +3,19 @@
 }
 
 
-.btn{
+.btn-style{
   color:#9900a6;
   background-color: transparent;
   border-color: #9900a6;
 }
 
-.btn:hover{
+.btn-style:hover{
   background-color: #9900a6;
   color: white;
 }
 
 
-
+a{
+  cursor: pointer;
+}
 

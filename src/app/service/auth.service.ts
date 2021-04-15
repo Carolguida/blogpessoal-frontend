@@ -40,13 +40,18 @@ export class AuthService {
 
 
   logado() { /* mostra menu e rodapé se logado */
-
-    let ok = false;
-
+    let ok = false
     if (environment.token !== ''){
-      ok =  true;
+      ok =  true
     }
+    return ok
+  }
 
+  adm(){
+    let ok = false
+    if(environment.tipoUsuario == 'adm'){
+      ok = true
+    }
     return ok
   }
 }

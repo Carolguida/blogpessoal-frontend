@@ -20,7 +20,7 @@ export class UsuarioEditComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private auth: AuthService,
+    public auth: AuthService,
     private route: ActivatedRoute,
     private alertas: AlertasService
   ) { }

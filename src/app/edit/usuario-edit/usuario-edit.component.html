@@ -40,8 +40,8 @@
           placeholder="Insira novamente sua senha">
       </div>
 
-      <div class="form-group">
-        <label for="tipo">Tipo de usuário</label>
+      <div *ngIf='auth.adm()' class="form-group">
+        <label  for="tipo">Tipo de usuário</label>
         <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
           <option>Selecione o tipo de usuário:</option>
           <option value="normal">Normal</option>
